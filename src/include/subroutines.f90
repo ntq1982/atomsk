@@ -1084,7 +1084,7 @@ ELSE
     !
     !If minmax is much greater than 1, or if D is greater than 1,
     !then coordinates are Cartesian
-    IF( avg > 1.5d0 .OR. minmax > th .OR. D > th    &
+    IF( avg > 1.5d0 .OR. minmax > th .OR. D > 1.0d0    &
       & .OR. minmax > 0.6d0*VECLENGTH(H(:,i))       ) THEN
       isreduced = .FALSE.
     ENDIF
