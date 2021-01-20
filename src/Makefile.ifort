@@ -17,12 +17,11 @@ OPENMP=-DOPENMP -qopenmp
 
 # COMPILATION FLAGS:
 # -module is used to specify the folder where the compiler will store the *.mod files
-FFLAGS=-O2 $(OPENMP) -module ../OBJ -funroll-loops
+FFLAGS=-O2 $(OPENMP) -module ../OBJ -funroll-loops -no-wrap-margin
 # -g -traceback
 
 # Paths and names of Intel Compiler Libraries
-LAPACK=-L /opt/intel/lib/intel64/             \
-       -L /opt/intel/mkl/lib/intel64/         \
+LAPACK=-L/opt/intel/mkl/lib/                  \
        -lmkl_intel_lp64 -lmkl_intel_thread    \
        -lmkl_lapack95_lp64 -lmkl_core -liomp5
 
